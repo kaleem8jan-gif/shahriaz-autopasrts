@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shah Riaz Auto Spare Parts | Honda Specialists — Ajman, Sharjah, Dubai</title>
+<meta name="description" content="Genuine Honda spare parts. Same-day delivery across UAE. Free delivery over AED 300. Order via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #D72638;
+    --dark: #0D0D0D;
+    --mid: #1A1A1A;
+    --card: #161616;
+    --silver: #C8C8C8;
+    --muted: #666;
+    --white: #F5F5F0;
+    --accent: #E8E8E0;
+    --wa: #25D366;
+    --font-en: 'DM Sans', sans-serif;
+    --font-ar: 'Noto Kufi Arabic', sans-serif;
+    --font-display: 'Bebas Neue', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: var(--font-en);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,13,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+    padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 18px; color: white; letter-spacing: 1px;
+  }
+  .logo-text { line-height: 1.2; }
+  .logo-text .en { font-size: 13px; font-weight: 500; color: var(--white); letter-spacing: 0.5px; }
+  .logo-text .ar { font-size: 11px; color: var(--muted); font-family: var(--font-ar); }
+  .nav-wa {
+    display: flex; align-items: center; gap: 7px;
+    background: var(--wa); color: white;
+    padding: 8px 16px; border-radius: 4px;
+    font-size: 13px; font-weight: 500;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .nav-wa:hover { opacity: 0.88; }
+  .nav-wa svg { width: 16px; height: 16px; fill: white; }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 60px 24px 40px;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid #1e1e1e;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(215,38,56,0.08) 0%, transparent 70%),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.012) 80px, rgba(255,255,255,0.012) 81px);
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid #333; padding: 5px 12px; border-radius: 2px;
+    font-size: 11px; color: var(--muted); letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 24px; width: fit-content;
+  }
+  .hero-badge span { width: 6px; height: 6px; background: var(--red); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 10vw, 110px);
+    line-height: 0.92; color: var(--white);
+    letter-spacing: 2px; margin-bottom: 8px;
+  }
+  .hero h1 .red { color: var(--red); }
+  .hero-ar {
+    font-family: var(--font-ar);
+    font-size: clamp(18px, 4vw, 32px);
+    color: var(--muted); margin-bottom: 28px; direction: rtl;
+  }
+  .hero-desc {
+    max-width: 480px;
+    font-size: 15px; color: var(--silver);
+    line-height: 1.7; margin-bottom: 36px;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--wa); color: white;
+    padding: 14px 24px; border-radius: 4px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.88; }
+  .btn-primary svg { width: 18px; height: 18px; fill: white; }
+  .btn-secondary {
+    display: flex; align-items: center; gap: 8px;
+    background: transparent; color: var(--white);
+    padding: 14px 24px; border-radius: 4px;
+    font-size: 14px; font-weight: 500;
+    border: 1px solid #333; cursor: pointer;
+    text-decoration: none; transition: border-color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--white); }
+  .hero-stats {
+    display: flex; gap: 32px; margin-top: 52px;
+    padding-top: 28px; border-top: 1px solid #1e1e1e; flex-wrap: wrap;
+  }
+  .stat-item .num { font-family: var(--font-display); font-size: 36px; color: var(--white); letter-spacing: 1px; }
+  .stat-item .lbl { font-size: 12px; color: var(--muted); margin-top: -4px; }
+
+  /* DELIVERY STRIP */
+  .strip {
+    background: var(--red);
+    padding: 10px 24px;
+    display: flex; gap: 24px; align-items: center;
+    overflow-x: auto; white-space: nowrap;
+  }
+  .strip-item {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12px; font-weight: 500; color: white; flex-shrink: 0;
+  }
+  .strip-item svg { width: 14px; height: 14px; fill: white; opacity: 0.8; }
+
+  /* SECTION */
+  section { padding: 60px 24px; }
+  .section-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 48px); letter-spacing: 1px; color: var(--white); margin-bottom: 4px; }
+  .section-title-ar { font-family: var(--font-ar); font-size: 16px; color: var(--muted); direction: rtl; margin-bottom: 28px; }
+
+  /* SEARCH */
+  .search-wrap { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+  .search-wrap input, .search-wrap select {
+    background: var(--card); border: 1px solid #2a2a2a;
+    color: var(--white); padding: 10px 14px; border-radius: 4px;
+    font-size: 13px; font-family: var(--font-en); outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-wrap input { flex: 1; min-width: 200px; }
+  .search-wrap input:focus, .search-wrap select:focus { border-color: var(--red); }
+  .search-wrap select option { background: var(--card); }
+
+  /* CATEGORY PILLS */
+  .cat-pills { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+  .pill {
+    padding: 6px 16px; border-radius: 2px;
+    font-size: 12px; border: 1px solid #2a2a2a;
+    color: var(--muted); cursor: pointer;
+    background: transparent; transition: all 0.2s;
+  }
+  .pill:hover { border-color: #444; color: var(--white); }
+  .pill.active { background: var(--red); border-color: var(--red); color: white; }
+
+  /* PRODUCT GRID */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px; border: 1px solid #1e1e1e;
+  }
+  .product-card {
+    background: var(--card); padding: 0;
+    display: flex; flex-direction: column;
+    transition: background 0.2s; cursor: default; overflow: hidden;
+  }
+  .product-card:hover { background: #1e1e1e; }
+  .product-img {
+    width: 100%; height: 160px;
+    object-fit: cover; display: block;
+    background: #111;
+  }
+  .product-img-placeholder {
+    width: 100%; height: 160px;
+    background: #1a1a1a;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--red);
+  }
+  .product-img-placeholder svg { width: 48px; height: 48px; stroke: var(--red); fill: none; stroke-width: 1.2; }
+  .product-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+  .product-cat { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .product-name { font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 3px; line-height: 1.3; }
+  .product-name-ar { font-family: var(--font-ar); font-size: 12px; color: var(--muted); direction: rtl; margin-bottom: 8px; }
+  .product-compat { font-size: 11px; color: #555; margin-bottom: 12px; line-height: 1.4; }
+  .product-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+  .product-price { font-family: var(--font-display); font-size: 22px; color: var(--white); letter-spacing: 1px; }
+  .product-price span { font-size: 11px; font-family: var(--font-en); color: var(--muted); }
+  .order-btn {
+    display: flex; align-items: center; gap: 5px;
+    background: var(--wa); color: white;
+    border: none; border-radius: 3px;
+    padding: 7px 12px; font-size: 11px; font-weight: 500;
+    cursor: pointer; text-decoration: none; transition: opacity 0.2s;
+  }
+  .order-btn:hover { opacity: 0.85; }
+  .order-btn svg { width: 13px; height: 13px; fill: white; }
+  .stock-tag {
+    display: inline-block;
+    font-size: 10px; padding: 2px 8px; border-radius: 2px;
+    margin-bottom: 10px;
+    background: rgba(37,211,102,0.12); color: #4ade80;
+  }
+  .no-results {
+    grid-column: 1/-1; padding: 48px 24px; text-align: center;
+    color: var(--muted); font-size: 14px;
+  }
+
+  /* HOW IT WORKS */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; border: 1px solid #1e1e1e; margin-top: 8px; }
+  .how-card { background: var(--card); padding: 28px 20px; }
+  .how-num { font-family: var(--font-display); font-size: 52px; color: #222; line-height: 1; margin-bottom: 14px; }
+  .how-title { font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 6px; }
+  .how-title-ar { font-family: var(--font-ar); font-size: 12px; color: var(--muted); direction: rtl; margin-bottom: 8px; }
+  .how-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* DELIVERY */
+  .delivery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 8px; }
+  .delivery-card { background: var(--card); border: 1px solid #1e1e1e; border-radius: 4px; padding: 20px; }
+  .delivery-area { font-family: var(--font-display); font-size: 22px; color: var(--white); letter-spacing: 1px; }
+  .delivery-area-ar { font-family: var(--font-ar); font-size: 13px; color: var(--muted); direction: rtl; margin-bottom: 8px; }
+  .delivery-time { font-size: 12px; color: var(--red); font-weight: 500; }
+  .delivery-price { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* CONTACT */
+  .contact-wrap {
+    background: var(--card); border: 1px solid #1e1e1e;
+    border-radius: 4px; padding: 36px 28px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  }
+  .contact-block h3 { font-family: var(--font-display); font-size: 28px; margin-bottom: 6px; color: var(--white); }
+  .contact-block p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+  .contact-wa-big {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--wa); color: white;
+    padding: 16px 22px; border-radius: 4px;
+    font-size: 15px; font-weight: 500;
+    text-decoration: none; transition: opacity 0.2s; width: fit-content;
+  }
+  .contact-wa-big:hover { opacity: 0.88; }
+  .contact-wa-big svg { width: 20px; height: 20px; fill: white; }
+  .contact-info { display: flex; flex-direction: column; gap: 14px; }
+  .contact-row { display: flex; align-items: flex-start; gap: 10px; }
+  .contact-row .icon { width: 32px; height: 32px; background: #222; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-row .icon svg { width: 15px; height: 15px; stroke: var(--silver); fill: none; stroke-width: 1.5; }
+  .contact-row .txt .lbl { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+  .contact-row .txt .val { font-size: 13px; color: var(--white); }
+
+  /* FOOTER */
+  footer {
+    background: var(--mid); border-top: 1px solid #1e1e1e;
+    padding: 24px; display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer .left { font-size: 12px; color: var(--muted); }
+  footer .right { font-size: 12px; color: var(--muted); font-family: var(--font-ar); direction: rtl; }
+
+  /* ===== ADMIN PANEL ===== */
+  #adminToggle {
+    position: fixed; bottom: 24px; left: 24px; z-index: 200;
+    background: #222; border: 1px solid #444;
+    color: var(--silver); padding: 10px 18px; border-radius: 4px;
+    font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.2s; font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  #adminToggle:hover { color: var(--white); border-color: var(--red); background: #1a1a1a; }
+  #adminPanel {
+    display: none;
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(0,0,0,0.88);
+    backdrop-filter: blur(6px);
+    overflow-y: auto;
+    padding: 30px 16px 60px;
+  }
+  #adminPanel.open { display: flex; align-items: flex-start; justify-content: center; }
+  .admin-box {
+    background: var(--mid); border: 1px solid #333;
+    border-radius: 8px; width: 100%; max-width: 780px;
+    overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  }
+  .admin-header {
+    background: var(--card); border-bottom: 1px solid #2a2a2a;
+    padding: 20px 24px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  }
+  .admin-header h2 { font-family: var(--font-display); font-size: 26px; color: var(--white); letter-spacing: 1px; }
+  .admin-header p { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+  .admin-tabs {
+    display: flex; gap: 0; border-bottom: 1px solid #2a2a2a;
+    background: var(--card);
+  }
+  .admin-tab {
+    padding: 12px 22px; font-size: 12px; font-weight: 500; letter-spacing: 0.5px;
+    color: var(--muted); cursor: pointer; border: none; background: transparent;
+    border-bottom: 2px solid transparent; transition: all 0.2s; text-transform: uppercase;
+  }
+  .admin-tab.active { color: var(--white); border-bottom-color: var(--red); }
+  .admin-tab:hover { color: var(--white); }
+  .admin-close {
+    background: transparent; border: 1px solid #333; color: var(--muted);
+    width: 34px; height: 34px; border-radius: 4px; font-size: 18px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .admin-close:hover { color: var(--white); border-color: #666; }
+  .admin-body { padding: 0; }
+  .admin-tab-content { display: none; padding: 20px 24px; }
+  .admin-tab-content.active { display: block; }
+
+  /* Price tab */
+  .admin-price-row {
+    display: grid; grid-template-columns: auto 1fr auto auto;
+    gap: 12px; align-items: center;
+    padding: 12px 0; border-bottom: 1px solid #1e1e1e;
+  }
+  .admin-thumb {
+    width: 44px; height: 44px; border-radius: 4px; object-fit: cover;
+    background: #222; border: 1px solid #2a2a2a; flex-shrink: 0;
+  }
+  .admin-thumb-placeholder {
+    width: 44px; height: 44px; border-radius: 4px;
+    background: #222; border: 1px solid #2a2a2a;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 18px; flex-shrink: 0;
+  }
+  .admin-part-name { font-size: 13px; color: var(--white); font-weight: 500; }
+  .admin-part-cat { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+  .admin-price-input {
+    background: var(--card); border: 1px solid #2a2a2a;
+    color: var(--white); padding: 7px 10px; border-radius: 3px;
+    font-size: 15px; font-family: var(--font-display);
+    width: 90px; text-align: right; outline: none;
+    transition: border-color 0.2s;
+  }
+  .admin-price-input:focus { border-color: var(--red); }
+  .admin-aed { font-size: 11px; color: var(--muted); width: 28px; }
+
+  /* Image upload tab */
+  .img-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .img-upload-card {
+    background: var(--card); border: 1px solid #2a2a2a;
+    border-radius: 6px; overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .img-upload-card:hover { border-color: #444; }
+  .img-upload-preview {
+    width: 100%; height: 130px; object-fit: cover;
+    display: block; background: #111;
+  }
+  .img-upload-placeholder {
+    width: 100%; height: 130px; background: #111;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 6px; color: #333; font-size: 11px; cursor: pointer;
+  }
+  .img-upload-placeholder svg { width: 28px; height: 28px; stroke: #333; fill: none; stroke-width: 1.5; }
+  .img-upload-info { padding: 10px 12px; }
+  .img-upload-name { font-size: 12px; color: var(--white); font-weight: 500; line-height: 1.3; margin-bottom: 2px; }
+  .img-upload-cat { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .img-upload-btn {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: 100%; padding: 7px; border-radius: 3px;
+    background: transparent; border: 1px solid #333;
+    color: var(--muted); font-size: 11px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .img-upload-btn:hover { border-color: var(--red); color: var(--white); }
+  .img-upload-btn.has-img { border-color: #25D366; color: #4ade80; }
+  .img-upload-btn svg { width: 12px; height: 12px; }
+  .img-file-input { display: none; }
+  .img-remove-btn {
+    display: none; align-items: center; justify-content: center; gap: 4px;
+    width: 100%; padding: 5px; border-radius: 3px; margin-top: 4px;
+    background: transparent; border: 1px solid #2a2a2a;
+    color: #666; font-size: 10px; cursor: pointer; transition: all 0.2s;
+  }
+  .img-remove-btn.show { display: flex; }
+  .img-remove-btn:hover { border-color: var(--red); color: var(--red); }
+
+  .admin-save-btn {
+    display: block; width: 100%; margin-top: 20px;
+    background: var(--red); color: white;
+    border: none; border-radius: 4px;
+    padding: 13px; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.2s; letter-spacing: 0.5px;
+  }
+  .admin-save-btn:hover { opacity: 0.88; }
+  .save-notice {
+    text-align: center; font-size: 12px; color: #4ade80;
+    margin-top: 10px; height: 18px;
+  }
+
+  /* RESPONSIVE */
+  @media(max-width: 640px) {
+    .nav-links { display: none; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 52px; }
+  }
+
+  /* ANIMATIONS */
+  .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s; }
+  .fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark">SR</div>
+    <div class="logo-text">
+      <div class="en">Shah Riaz Auto Parts</div>
+      <div class="ar">شاه رياض لقطع غيار السيارات</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#products">Parts</a>
+    <a href="#how">How it works</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-wa" href="https://wa.me/971568429622?text=Hello!%20I%20want%20to%20order%20a%20spare%20part." target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp Us
+  </a>
+</nav>
+
+<!-- DELIVERY STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-4 12H9m12 0h-6m-3-5h9a2 2 0 002-2v-4a2 2 0 00-2-2h-9"/></svg>
+    Delivery All Over UAE 🇦🇪
+  </div>
+  <div class="strip-item">
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    FREE Delivery on Orders Over AED 300
+  </div>
+  <div class="strip-item">
+    <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-4 12H9m12 0h-6m-3-5h9a2 2 0 002-2v-4a2 2 0 00-2-2h-9"/></svg>
+    Ajman & Sharjah — Same Day
+  </div>
+  <div class="strip-item">
+    <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    OEM & Genuine Honda Parts
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-badge"><span></span> Honda Spare Parts Specialist — UAE</div>
+  <h1>SHAH RIAZ<br><span class="red">AUTO</span><br>PARTS</h1>
+  <div class="hero-ar">شاه رياض لقطع غيار السيارات — هوندا</div>
+  <p class="hero-desc">Genuine Honda spare parts delivered across the UAE. Free delivery on orders over AED 300. Order in 30 seconds via WhatsApp — no complicated checkout.</p>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="https://wa.me/971568429622?text=Hello!%20I%20want%20to%20order%20a%20Honda%20spare%20part." target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Order via WhatsApp
+    </a>
+    <a class="btn-secondary" href="#products">Browse Parts</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="num">500+</div><div class="lbl">Parts available</div></div>
+    <div class="stat-item"><div class="num">UAE</div><div class="lbl">Nationwide delivery</div></div>
+    <div class="stat-item"><div class="num">FREE</div><div class="lbl">Delivery over AED 300</div></div>
+    <div class="stat-item"><div class="num">COD</div><div class="lbl">Cash on delivery</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-label">Spare Parts — قطع الغيار</div>
+  <div class="section-title">HONDA PARTS CATALOG</div>
+  <div class="section-title-ar">كتالوج قطع غيار هوندا</div>
+
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search part name, model or part number...">
+    <select id="modelFilter">
+      <option value="">All Honda models</option>
+      <option>Civic</option>
+      <option>Accord</option>
+      <option>CR-V</option>
+      <option>Pilot</option>
+      <option>Jazz / Fit</option>
+      <option>HR-V</option>
+      <option>Odyssey</option>
+    </select>
+    <select id="catFilter">
+      <option value="">All categories</option>
+      <option value="brakes">Brakes</option>
+      <option value="engine">Engine</option>
+      <option value="filters">Filters</option>
+      <option value="suspension">Suspension</option>
+      <option value="electrical">Electrical</option>
+      <option value="body">Body</option>
+    </select>
+  </div>
+
+  <div class="cat-pills" id="catPills">
+    <button class="pill active" onclick="setcat('',this)">All parts</button>
+    <button class="pill" onclick="setcat('brakes',this)">Brakes — فرامل</button>
+    <button class="pill" onclick="setcat('engine',this)">Engine — محرك</button>
+    <button class="pill" onclick="setcat('filters',this)">Filters — فلاتر</button>
+    <button class="pill" onclick="setcat('suspension',this)">Suspension — تعليق</button>
+    <button class="pill" onclick="setcat('electrical',this)">Electrical — كهرباء</button>
+    <button class="pill" onclick="setcat('body',this)">Body — هيكل</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background: var(--mid);">
+  <div class="section-label">Process — كيف يعمل</div>
+  <div class="section-title">HOW TO ORDER</div>
+  <div class="section-title-ar">كيفية الطلب</div>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">Browse & find your part</div>
+      <div class="how-title-ar">تصفح وابحث عن قطعتك</div>
+      <div class="how-desc">Search by part name, Honda model, or part number. Find what you need instantly.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">Tap "Order via WhatsApp"</div>
+      <div class="how-title-ar">اضغط "اطلب عبر واتساب"</div>
+      <div class="how-desc">One tap sends us your order details automatically. No forms, no hassle.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">We confirm in minutes</div>
+      <div class="how-title-ar">نؤكد خلال دقائق</div>
+      <div class="how-desc">We reply within 1 hour to confirm availability, price and delivery time.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">04</div>
+      <div class="how-title">Part delivered to you</div>
+      <div class="how-title-ar">القطعة تصل إليك</div>
+      <div class="how-desc">Your driver brings the part anywhere in the UAE. Pay cash on delivery — simple.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section id="delivery">
+  <div class="section-label">Coverage — التغطية</div>
+  <div class="section-title">DELIVERY ACROSS UAE</div>
+  <div class="section-title-ar">التوصيل في جميع أنحاء الإمارات</div>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <div class="delivery-area">AJMAN</div>
+      <div class="delivery-area-ar">عجمان</div>
+      <div class="delivery-time">Same-day delivery</div>
+      <div class="delivery-price">Delivery fee: AED 15–20</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-area">SHARJAH</div>
+      <div class="delivery-area-ar">الشارقة</div>
+      <div class="delivery-time">Same-day delivery</div>
+      <div class="delivery-price">Delivery fee: AED 20–25</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-area">DUBAI</div>
+      <div class="delivery-area-ar">دبي</div>
+      <div class="delivery-time">Next-day delivery</div>
+      <div class="delivery-price">Delivery fee: AED 25–35</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-area">ABU DHABI</div>
+      <div class="delivery-area-ar">أبوظبي</div>
+      <div class="delivery-time">1–2 day delivery</div>
+      <div class="delivery-price">Delivery fee: AED 35–50</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-area">RAK / FUJ</div>
+      <div class="delivery-area-ar">رأس الخيمة / الفجيرة</div>
+      <div class="delivery-time">1–2 day delivery</div>
+      <div class="delivery-price">Delivery fee: AED 30–45</div>
+    </div>
+    <div class="delivery-card" style="border-color: var(--red);">
+      <div class="delivery-area" style="color: var(--red);">FREE 🎁</div>
+      <div class="delivery-area-ar" style="color: var(--white);">توصيل مجاني</div>
+      <div class="delivery-time" style="color: var(--silver);">On orders over AED 300</div>
+      <div class="delivery-price" style="color: var(--red); font-weight: 600;">Valid across all UAE</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background: var(--mid);">
+  <div class="section-label">Contact — تواصل معنا</div>
+  <div class="section-title">GET IN TOUCH</div>
+  <div class="section-title-ar">تواصل معنا</div>
+  <div class="contact-wrap">
+    <div class="contact-block">
+      <h3>Order via WhatsApp</h3>
+      <p>The fastest way to order. Send us a message and we'll reply within 1 hour with availability and price confirmation.</p>
+      <p style="font-family: var(--font-ar); direction: rtl; font-size:13px; color: var(--muted); margin-bottom: 20px;">اطلب عبر واتساب — أسرع طريقة للطلب. أرسل لنا رسالة وسنرد خلال ساعة.</p>
+      <a class="contact-wa-big" href="https://wa.me/971568429622?text=Hello!%20I%20need%20a%20Honda%20spare%20part." target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        +971 56 842 9622
+      </a>
+    </div>
+    <div class="contact-info">
+      <div class="contact-row">
+        <div class="icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="txt">
+          <div class="lbl">Location</div>
+          <div class="val">Ajman, UAE · Delivering All Over UAE 🇦🇪</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="txt">
+          <div class="lbl">Specialty</div>
+          <div class="val">Honda OEM & Genuine Parts</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="txt">
+          <div class="lbl">Working hours</div>
+          <div class="val">Sat–Thu: 8AM – 9PM · Fri: 2PM – 9PM</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="txt">
+          <div class="lbl">Free Delivery</div>
+          <div class="val">On orders above AED 300 — Anywhere in UAE</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+        <div class="txt">
+          <div class="lbl">Payment</div>
+          <div class="val">Cash on Delivery (COD)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="left">© 2025 Shah Riaz Auto Spare Parts · Ajman, UAE · Honda Specialists · +971 56 842 9622</div>
+  <div class="right">شاه رياض لقطع غيار السيارات · عجمان · متخصصون في هوندا</div>
+</footer>
+
+<!-- ADMIN TOGGLE BUTTON -->
+<button id="adminToggle" onclick="toggleAdmin()">⚙ Manage Products</button>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel">
+  <div class="admin-box">
+    <div class="admin-header">
+      <div>
+        <h2>PRODUCT MANAGER</h2>
+        <p>Update prices & upload your own part photos — all saved automatically</p>
+      </div>
+      <button class="admin-close" onclick="toggleAdmin()">✕</button>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchTab('prices',this)">💰 Edit Prices</button>
+      <button class="admin-tab" onclick="switchTab('images',this)">📷 Upload Photos</button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tab-content active" id="tab-prices">
+        <div id="adminPriceBody"></div>
+        <button class="admin-save-btn" onclick="savePrices()">💾 Save All Prices</button>
+        <div class="save-notice" id="saveNotice"></div>
+      </div>
+      <div class="admin-tab-content" id="tab-images">
+        <div class="img-upload-grid" id="imgUploadGrid"></div>
+        <div class="save-notice" id="imgNotice" style="margin-top:16px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const WA = '971568429622';
+
+// Product images — real auto part photos via Unsplash/Pexels CDN
+const products = [
+  { id:1,  name:'Front Brake Pads',           nameAr:'تيل الفرامل الأمامي',       cat:'brakes',     models:'Civic 2012–2023, Accord 2013–2023',          price:95,  partNo:'HN-BP-F01', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
+  { id:2,  name:'Rear Brake Pads',             nameAr:'تيل الفرامل الخلفي',        cat:'brakes',     models:'CR-V 2015–2023, Pilot 2016–2023',            price:85,  partNo:'HN-BP-R02', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
+  { id:3,  name:'Brake Disc Rotor (Front)',    nameAr:'قرص الفرامل الأمامي',       cat:'brakes',     models:'Accord 2013–2022, Civic 2016–2022',          price:180, partNo:'HN-BD-F03', img:'https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?w=400&q=80' },
+  { id:4,  name:'Engine Oil Filter',           nameAr:'فلتر زيت المحرك',           cat:'filters',    models:'All Honda models',                           price:22,  partNo:'HN-OF-001', img:'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da11?w=400&q=80' },
+  { id:5,  name:'Air Filter',                  nameAr:'فلتر الهواء',               cat:'filters',    models:'Civic 2012–2023, Jazz 2015–2022',            price:38,  partNo:'HN-AF-002', img:'https://images.unsplash.com/photo-1606577924006-27d39b132ae2?w=400&q=80' },
+  { id:6,  name:'Cabin Air Filter',            nameAr:'فلتر هواء الكابينة',        cat:'filters',    models:'All Honda models',                           price:30,  partNo:'HN-CF-003', img:'https://images.unsplash.com/photo-1606577924006-27d39b132ae2?w=400&q=80' },
+  { id:7,  name:'Fuel Filter',                 nameAr:'فلتر الوقود',               cat:'filters',    models:'CR-V, HR-V, Accord',                         price:55,  partNo:'HN-FF-004', img:'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80' },
+  { id:8,  name:'Spark Plugs (Set of 4)',      nameAr:'شمعات الإشعال (4 قطع)',     cat:'engine',     models:'Civic 2012–2023, Jazz',                      price:65,  partNo:'HN-SP-101', img:'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80' },
+  { id:9,  name:'Timing Belt Kit',             nameAr:'طقم سير التوقيت',           cat:'engine',     models:'Accord 2008–2017, CR-V 2007–2016',           price:180, partNo:'HN-TB-102', img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80' },
+  { id:10, name:'Engine Mount',                nameAr:'حاملة المحرك',              cat:'engine',     models:'Civic 2012–2021',                            price:220, partNo:'HN-EM-103', img:'https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=400&q=80' },
+  { id:11, name:'Drive Belt (Serpentine)',      nameAr:'سير الدراف',                cat:'engine',     models:'All Honda models',                           price:75,  partNo:'HN-DB-104', img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80' },
+  { id:12, name:'Front Shock Absorber',        nameAr:'مساعد أمامي',               cat:'suspension', models:'Civic 2016–2023, Accord',                    price:280, partNo:'HN-SA-F01', img:'https://images.unsplash.com/photo-1567818735868-e71b99932e29?w=400&q=80' },
+  { id:13, name:'Rear Shock Absorber',         nameAr:'مساعد خلفي',                cat:'suspension', models:'CR-V 2015–2023, Pilot',                      price:250, partNo:'HN-SA-R02', img:'https://images.unsplash.com/photo-1567818735868-e71b99932e29?w=400&q=80' },
+  { id:14, name:'Control Arm (Lower)',         nameAr:'ذراع التعليق السفلي',       cat:'suspension', models:'Civic 2012–2022',                            price:320, partNo:'HN-CA-003', img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80' },
+  { id:15, name:'Car Battery 45Ah',            nameAr:'بطارية سيارة 45 أمبير',     cat:'electrical', models:'Civic, Jazz, HR-V',                          price:260, partNo:'HN-BAT-45', img:'https://images.unsplash.com/photo-1609791266427-1a4a42c08e50?w=400&q=80' },
+  { id:16, name:'Car Battery 60Ah',            nameAr:'بطارية سيارة 60 أمبير',     cat:'electrical', models:'Accord, CR-V, Pilot, Odyssey',               price:310, partNo:'HN-BAT-60', img:'https://images.unsplash.com/photo-1609791266427-1a4a42c08e50?w=400&q=80' },
+  { id:17, name:'Alternator',                  nameAr:'دينمو',                     cat:'electrical', models:'Civic 2012–2020, Accord',                    price:580, partNo:'HN-ALT-001', img:'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&q=80' },
+  { id:18, name:'Front Bumper',                nameAr:'بامبر أمامي',               cat:'body',       models:'Civic 2016–2021 (OEM)',                      price:420, partNo:'HN-BMP-F01', img:'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=400&q=80' },
+  { id:19, name:'Side Mirror (Right)',         nameAr:'مرايا جانبية يمين',         cat:'body',       models:'Accord 2018–2022',                           price:190, partNo:'HN-MIR-R01', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
+  { id:20, name:'Headlight Assembly',          nameAr:'كشاف أمامي',                cat:'body',       models:'Civic 2016–2021',                            price:650, partNo:'HN-HL-001', img:'https://images.unsplash.com/photo-1558618047-f4e60c3f8be4?w=400&q=80' },
+];
+
+// Load saved prices & images from localStorage
+const savedPrices = JSON.parse(localStorage.getItem('srPrices') || '{}');
+const savedImgs   = JSON.parse(localStorage.getItem('srImages') || '{}');
+products.forEach(p => {
+  if (savedPrices[p.id]) p.price = savedPrices[p.id];
+  if (savedImgs[p.id])   p.customImg = savedImgs[p.id];
+});
+
+const icons = {
+  brakes:     `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>`,
+  filters:    `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>`,
+  engine:     `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 014 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
+  suspension: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`,
+  electrical: `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  body:       `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>`,
+};
+
+let activeCat = '';
+
+function setcat(cat, el) {
+  activeCat = cat;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('catFilter').value = cat;
+  render();
+}
+
+function getImgSrc(p) {
+  return p.customImg || p.img || '';
+}
+
+function render() {
+  const q     = document.getElementById('searchInput').value.toLowerCase();
+  const model = document.getElementById('modelFilter').value.toLowerCase();
+  const cat   = document.getElementById('catFilter').value || activeCat;
+
+  const filtered = products.filter(p => {
+    const catOk   = !cat   || p.cat === cat;
+    const qOk     = !q     || p.name.toLowerCase().includes(q) || p.nameAr.includes(q) || p.models.toLowerCase().includes(q) || p.partNo.toLowerCase().includes(q);
+    const modelOk = !model || p.models.toLowerCase().includes(model);
+    return catOk && qOk && modelOk;
+  });
+
+  const grid = document.getElementById('productsGrid');
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="no-results"><div style="font-size:32px;margin-bottom:12px;opacity:0.3">🔍</div>No parts found matching your search.<br>WhatsApp us and we'll check stock for you!</div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const imgSrc = getImgSrc(p);
+    const msg = encodeURIComponent(`Hello Shah Riaz Auto Parts!\n\nI want to order:\n*${p.name}*\nPart No: ${p.partNo}\nCompatible: ${p.models}\nPrice: AED ${p.price}\n\nPlease confirm availability and delivery.`);
+    const freeDelivery = p.price >= 300 ? `<span style="font-size:10px;background:rgba(215,38,56,0.15);color:var(--red);padding:2px 7px;border-radius:2px;margin-left:6px;">FREE DELIVERY</span>` : '';
+    const imgHtml = imgSrc
+      ? `<img class="product-img" src="${imgSrc}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" loading="lazy"><div class="product-img-placeholder" style="display:none">${icons[p.cat]||icons.engine}</div>`
+      : `<div class="product-img-placeholder">${icons[p.cat]||icons.engine}</div>`;
+    return `
+    <div class="product-card">
+      ${imgHtml}
+      <div class="product-body">
+        <div class="product-cat">${p.cat}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-name-ar">${p.nameAr}</div>
+        <div class="stock-tag">✓ In stock</div>
+        <div class="product-compat">${p.models}</div>
+        <div style="font-size:10px;color:#444;margin-bottom:12px;">Part No: ${p.partNo}</div>
+        <div class="product-bottom">
+          <div>
+            <div class="product-price">${p.price} <span>AED</span></div>
+            ${freeDelivery}
+          </div>
+          <a class="order-btn" href="https://wa.me/${WA}?text=${msg}" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order
+          </a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ===== ADMIN PANEL =====
+function toggleAdmin() {
+  const panel = document.getElementById('adminPanel');
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) {
+    buildPriceTab();
+    buildImageTab();
+  }
+}
+
+function switchTab(tab, el) {
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+}
+
+// --- PRICE TAB ---
+function buildPriceTab() {
+  const body = document.getElementById('adminPriceBody');
+  body.innerHTML = products.map(p => {
+    const imgSrc = getImgSrc(p);
+    const thumbHtml = imgSrc
+      ? `<img class="admin-thumb" src="${imgSrc}" alt="${p.name}">`
+      : `<div class="admin-thumb-placeholder">${['🔧','⚙️','🛞','🔋','💡','🪟'][['brakes','engine','suspension','electrical','body','filters'].indexOf(p.cat)] || '🔩'}</div>`;
+    return `
+    <div class="admin-price-row">
+      ${thumbHtml}
+      <div>
+        <div class="admin-part-name">${p.name}</div>
+        <div class="admin-part-cat">${p.cat} · ${p.partNo}</div>
+      </div>
+      <input class="admin-price-input" type="number" id="price_${p.id}" value="${p.price}" min="1">
+      <div class="admin-aed">AED</div>
+    </div>`;
+  }).join('');
+}
+
+function savePrices() {
+  const priceMap = {};
+  products.forEach(p => {
+    const input = document.getElementById('price_' + p.id);
+    if (input) {
+      const val = parseFloat(input.value);
+      if (!isNaN(val) && val > 0) { p.price = val; priceMap[p.id] = val; }
+    }
+  });
+  localStorage.setItem('srPrices', JSON.stringify(priceMap));
+  render();
+  const notice = document.getElementById('saveNotice');
+  notice.textContent = '✓ Prices saved and updated on the website!';
+  setTimeout(() => { notice.textContent = ''; }, 3000);
+}
+
+// --- IMAGE UPLOAD TAB ---
+function buildImageTab() {
+  const grid = document.getElementById('imgUploadGrid');
+  grid.innerHTML = products.map(p => {
+    const imgSrc = getImgSrc(p);
+    const hasImg = !!p.customImg;
+    return `
+    <div class="img-upload-card" id="imgcard_${p.id}">
+      ${imgSrc
+        ? `<img class="img-upload-preview" id="imgprev_${p.id}" src="${imgSrc}" alt="${p.name}" onclick="document.getElementById('imgfile_${p.id}').click()" style="cursor:pointer">`
+        : `<div class="img-upload-placeholder" onclick="document.getElementById('imgfile_${p.id}').click()">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>No photo yet</span>
+           </div>`
+      }
+      <input class="img-file-input" type="file" id="imgfile_${p.id}" accept="image/*" onchange="handleImgUpload(event, ${p.id})">
+      <div class="img-upload-info">
+        <div class="img-upload-name">${p.name}</div>
+        <div class="img-upload-cat">${p.cat}</div>
+        <button class="img-upload-btn ${hasImg ? 'has-img' : ''}" onclick="document.getElementById('imgfile_${p.id}').click()">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          ${hasImg ? '✓ Photo uploaded — change' : 'Upload photo'}
+        </button>
+        <button class="img-remove-btn ${hasImg ? 'show' : ''}" id="imgremove_${p.id}" onclick="removeImg(${p.id})">✕ Remove photo</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function handleImgUpload(event, productId) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dataUrl = e.target.result;
+    // Resize image to max 600px wide to keep storage light
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      const maxW = 600;
+      const scale = img.width > maxW ? maxW / img.width : 1;
+      canvas.width  = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      const compressed = canvas.toDataURL('image/jpeg', 0.82);
+
+      // Update product object
+      const p = products.find(x => x.id === productId);
+      if (p) p.customImg = compressed;
+
+      // Save to localStorage
+      const imgMap = JSON.parse(localStorage.getItem('srImages') || '{}');
+      imgMap[productId] = compressed;
+      localStorage.setItem('srImages', JSON.stringify(imgMap));
+
+      // Update preview in admin panel
+      const card = document.getElementById('imgcard_' + productId);
+      if (card) {
+        // Replace placeholder/img at top
+        let prev = document.getElementById('imgprev_' + productId);
+        if (prev) {
+          prev.src = compressed;
+        } else {
+          const placeholder = card.querySelector('.img-upload-placeholder');
+          if (placeholder) {
+            const newImg = document.createElement('img');
+            newImg.className = 'img-upload-preview';
+            newImg.id = 'imgprev_' + productId;
+            newImg.src = compressed;
+            newImg.alt = p ? p.name : '';
+            newImg.style.cursor = 'pointer';
+            newImg.onclick = () => document.getElementById('imgfile_' + productId).click();
+            card.replaceChild(newImg, placeholder);
+          }
+        }
+        const btn = card.querySelector('.img-upload-btn');
+        if (btn) { btn.classList.add('has-img'); btn.innerHTML = `<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> ✓ Photo uploaded — change`; }
+        const rem = document.getElementById('imgremove_' + productId);
+        if (rem) rem.classList.add('show');
+      }
+
+      // Re-render product grid with new image
+      render();
+
+      // Also refresh price tab thumbnails if open
+      buildPriceTab();
+
+      const notice = document.getElementById('imgNotice');
+      notice.textContent = `✓ Photo for "${p ? p.name : 'part'}" saved!`;
+      setTimeout(() => { notice.textContent = ''; }, 3000);
+    };
+    img.src = dataUrl;
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeImg(productId) {
+  const p = products.find(x => x.id === productId);
+  if (p) delete p.customImg;
+
+  const imgMap = JSON.parse(localStorage.getItem('srImages') || '{}');
+  delete imgMap[productId];
+  localStorage.setItem('srImages', JSON.stringify(imgMap));
+
+  buildImageTab();
+  buildPriceTab();
+  render();
+
+  const notice = document.getElementById('imgNotice');
+  notice.textContent = '✓ Photo removed.';
+  setTimeout(() => { notice.textContent = ''; }, 2000);
+}
+
+document.getElementById('searchInput').addEventListener('input', render);
+document.getElementById('modelFilter').addEventListener('change', render);
+document.getElementById('catFilter').addEventListener('change', function() {
+  activeCat = this.value;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.pill')[0].classList.add('active');
+  render();
+});
+
+render();
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
